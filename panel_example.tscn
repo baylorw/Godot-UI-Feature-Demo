@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://5w5lr5eb46vo"]
+
+[ext_resource type="Script" path="res://panel_example.gd" id="1_5n4rk"]
+[ext_resource type="Texture2D" uid="uid://bgdmehebifqq2" path="res://MenuPanel.png" id="1_dqnqi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_px4p8"]
+texture = ExtResource("1_dqnqi")
+texture_margin_left = 2.45346
+region_rect = Rect2(33.6959, 24.6665, 185.122, 229.092)
+
+[sub_resource type="Theme" id="Theme_5it15"]
+Panel/styles/panel = SubResource("StyleBoxTexture_px4p8")
+
+[node name="PanelExample" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5n4rk")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="PanelContainer"]
+layout_mode = 2
+theme = SubResource("Theme_5it15")
