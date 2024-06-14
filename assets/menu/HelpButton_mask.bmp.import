@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://x6vbortwukhu"
+path="res://.godot/imported/HelpButton_mask.bmp-9b3dcf2c72d30644d37f7f689db74de5.res"
+
+[deps]
+
+source_file="res://assets/menu/HelpButton_mask.bmp"
+dest_files=["res://.godot/imported/HelpButton_mask.bmp-9b3dcf2c72d30644d37f7f689db74de5.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

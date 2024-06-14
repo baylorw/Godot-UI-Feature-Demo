@@ -1,13 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://c72rwcbajkve8"]
 
-[ext_resource type="Script" path="res://layout_example.gd" id="1_3opis"]
-
 [sub_resource type="Theme" id="Theme_1bep3"]
 default_font_size = 36
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(1, 0, 0, 1)
 
-[node name="LayoutExample" type="Control"]
+[sub_resource type="GDScript" id="GDScript_xec8f"]
+script/source = "extends Control
+
+###
+### 1. Create Control
+### 2. Add ColorRect
+### 3. Anchor = Full Rect
+### 4. Add MarginContainer (to the color?), make it Full Rect
+###
+
+"
+
+[node name="BoxLayoutExample" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_1bep3")
-script = ExtResource("1_3opis")
+script = SubResource("GDScript_xec8f")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
