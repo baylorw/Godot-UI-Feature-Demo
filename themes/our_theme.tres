@@ -28,11 +28,11 @@ texture_margin_right = 20.0
 texture_margin_bottom = 20.0
 
 [resource]
-Button/font_sizes/font_size = 48
+Button/font_sizes/font_size = 36
 Button/fonts/font = ExtResource("1_n2v56")
 Button/styles/hover = SubResource("StyleBoxTexture_huxw7")
 Button/styles/normal = SubResource("StyleBoxTexture_cdij1")
 Label/colors/font_color = Color(1, 0.0392157, 1, 1)
-Label/font_sizes/font_size = 32
+Label/font_sizes/font_size = 24
 Label/fonts/font = ExtResource("1_n2v56")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_pso3h")

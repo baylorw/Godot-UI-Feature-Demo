@@ -1,0 +1,259 @@
+[gd_scene load_steps=3 format=3 uid="uid://c72rwcbajkve8"]
+
+[sub_resource type="Theme" id="Theme_1bep3"]
+default_font_size = 24
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(1, 0, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_xec8f"]
+script/source = "extends Control
+
+###
+### 1. Create Control
+### 2. Add ColorRect
+### 3. Anchor = Full Rect
+### 4. Add MarginContainer (to the color?), make it Full Rect
+###
+
+func _unhandled_input(event):
+	if event.is_action_pressed(\"ui_cancel\"):
+		get_tree().change_scene_to_file(\"res://menus/main_menu.tscn\")
+"
+
+[node name="LayoutContainersExample" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1bep3")
+script = SubResource("GDScript_xec8f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.247059, 1, 0.627451, 1)
+
+[node name="Buttons" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = -292.0
+offset_top = -536.0
+offset_right = -252.0
+offset_bottom = -496.0
+
+[node name="AliceButton" type="Button" parent="Buttons"]
+layout_mode = 2
+offset_left = 302.0
+offset_top = 549.0
+offset_right = 456.0
+offset_bottom = 607.0
+text = "Alice"
+
+[node name="BobButton" type="Button" parent="Buttons"]
+layout_mode = 2
+offset_left = 460.0
+offset_top = 549.0
+offset_right = 555.0
+offset_bottom = 607.0
+text = "Bob"
+
+[node name="CarolineButton" type="Button" parent="Buttons"]
+layout_mode = 2
+offset_left = 305.0
+offset_top = 617.0
+offset_right = 459.0
+offset_bottom = 675.0
+text = "Caroline"
+
+[node name="DaveButton" type="Button" parent="Buttons"]
+layout_mode = 2
+offset_left = 468.0
+offset_top = 619.0
+offset_right = 622.0
+offset_bottom = 677.0
+text = "Dave"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 315.0
+offset_bottom = 55.0
+
+[node name="AliceButton2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Alice"
+
+[node name="BobButton2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Bob"
+
+[node name="CarolineButton2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Caroline"
+
+[node name="DaveButton2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Dave"
+
+[node name="HBoxContainer2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 55.0
+offset_right = 282.0
+offset_bottom = 105.0
+text = "HBoxContainer"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 139.0
+offset_right = 167.0
+offset_bottom = 383.0
+
+[node name="AliceButton2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Alice"
+
+[node name="BobButton2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Bob"
+
+[node name="CarolineButton2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Caroline"
+
+[node name="DaveButton2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Dave"
+
+[node name="VBoxContainer3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 319.0
+offset_right = 282.0
+offset_bottom = 369.0
+text = "VBoxContainer"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 383.0
+offset_right = 346.0
+offset_bottom = 503.0
+columns = 3
+
+[node name="AliceButton2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Alice"
+
+[node name="BobButton2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Bob"
+
+[node name="CarolineButton2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Caroline"
+
+[node name="DaveButton2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Dave"
+
+[node name="GridContainer4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 473.0
+offset_right = 279.0
+offset_bottom = 523.0
+text = "GridContainer"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 13.0
+offset_right = 1128.0
+offset_bottom = 443.0
+
+[node name="AliceButton3" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "VBox"
+
+[node name="AliceButton4" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "HBox"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="AliceButton2" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+text = "Ali"
+
+[node name="BobButton2" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+text = "Bobsaurus"
+
+[node name="CarolineButton2" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+text = "C"
+
+[node name="DaveButton2" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+text = "Dave"
+
+[node name="AliceButton5" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Grid col=3"
+
+[node name="GridContainer2" type="GridContainer" parent="VBoxContainer2"]
+layout_mode = 2
+columns = 3
+
+[node name="AliceButton3" type="Button" parent="VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "Ali"
+
+[node name="BobButton3" type="Button" parent="VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "Bobsaurus"
+
+[node name="CarolineButton3" type="Button" parent="VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "C"
+
+[node name="DaveButton3" type="Button" parent="VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "Dave"
+
+[node name="AliceButton4" type="Button" parent="VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "Ali"
+
+[node name="BobButton4" type="Button" parent="VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "Bobsaurus"
+
+[node name="CarolineButton4" type="Button" parent="VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "C"
+
+[node name="DaveButton4" type="Button" parent="VBoxContainer2/GridContainer2"]
+layout_mode = 2
+text = "Dave"
+
+[node name="Mixed Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 13.0
+offset_right = 634.0
+offset_bottom = 169.0
+text = "VBox
+|- Button
+|- HBox
+|- Grid"

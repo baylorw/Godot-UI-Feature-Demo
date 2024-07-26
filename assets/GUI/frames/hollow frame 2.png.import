@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgdmehebifqq2"
-path="res://.godot/imported/MenuPanel.png-fec864bdcc374907f1874baf98a77f2f.ctex"
+uid="uid://dqthw6q8801l5"
+path="res://.godot/imported/hollow frame 2.png-a10c4a6e53a13331800b84261179d382.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/MenuPanel.png"
-dest_files=["res://.godot/imported/MenuPanel.png-fec864bdcc374907f1874baf98a77f2f.ctex"]
+source_file="res://assets/GUI/frames/hollow frame 2.png"
+dest_files=["res://.godot/imported/hollow frame 2.png-a10c4a6e53a13331800b84261179d382.ctex"]
 
 [params]
 

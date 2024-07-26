@@ -1,0 +1,115 @@
+[gd_scene load_steps=7 format=3 uid="uid://jaa5wqe8hbgn"]
+
+[ext_resource type="Texture2D" uid="uid://m3h5fhy7kftt" path="res://assets/GUI/frames/stone-frame  hollow 25.png" id="1_lpjhy"]
+[ext_resource type="Script" path="res://levels/nine_patch_rect/nine_patch_rect_demo.gd" id="1_tawem"]
+[ext_resource type="Texture2D" uid="uid://degsyt77avgoi" path="res://assets/GUI/frames/stone frame 25.png" id="2_bc0xx"]
+[ext_resource type="Texture2D" uid="uid://c2a3yx0rjk7l5" path="res://assets/GUI/frames/stone-frame  hollow 10.png" id="2_vpqyi"]
+[ext_resource type="Texture2D" uid="uid://cnm1vaa252a8v" path="res://assets/GUI/frames/stone-frame  hollow.png" id="3_pbhtd"]
+[ext_resource type="Texture2D" uid="uid://ekqrl35fj7qi" path="res://assets/GUI/frames/stone frame 10.png" id="4_8whhs"]
+
+[node name="NinePatchRectDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tawem")
+
+[node name="Container" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 458.0
+offset_bottom = 490.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Container"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextureRect" type="TextureRect" parent="Container/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_bc0xx")
+
+[node name="NinePatchRect Big" type="NinePatchRect" parent="Container"]
+layout_mode = 2
+texture = ExtResource("3_pbhtd")
+draw_center = false
+region_rect = Rect2(-6.67935, -7.28041, 1013.12, 1072.06)
+patch_margin_left = 159
+patch_margin_top = 219
+patch_margin_right = 153
+patch_margin_bottom = 180
+
+[node name="NinePatchRect 26" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 123.0
+offset_right = 885.0
+offset_bottom = 548.0
+texture = ExtResource("2_bc0xx")
+region_rect = Rect2(0, 0, 309, 301)
+patch_margin_left = 96
+patch_margin_top = 120
+patch_margin_right = 66
+patch_margin_bottom = 69
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect 26"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 50
+
+[node name="Label" type="Label" parent="NinePatchRect 26/MarginContainer"]
+layout_mode = 2
+text = "Editor sometimes works, sometimes doesn't.
+
+For a standalone image, you want RegionRect all 0. The value to change is Patch Margin. 
+
+Sometimes the editor works, sometimes not. You want the red ball on the outside edges, dotted lines on the inside."
+autowrap_mode = 2
+
+[node name="NinePatchRect 25" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 967.0
+offset_top = 461.0
+offset_right = 1126.0
+offset_bottom = 630.0
+texture = ExtResource("1_lpjhy")
+draw_center = false
+patch_margin_left = 38
+patch_margin_top = 53
+patch_margin_right = 37
+patch_margin_bottom = 44
+
+[node name="NinePatchRect 10" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 1002.0
+offset_top = 20.0
+offset_right = 1125.0
+offset_bottom = 137.0
+texture = ExtResource("2_vpqyi")
+draw_center = false
+patch_margin_left = 15
+patch_margin_top = 22
+patch_margin_right = 15
+patch_margin_bottom = 22
+
+[node name="NinePatchRect 11" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 500.0
+offset_right = 454.0
+offset_bottom = 636.0
+texture = ExtResource("4_8whhs")
+patch_margin_left = 54
+patch_margin_top = 48
+patch_margin_right = 27
+patch_margin_bottom = 28

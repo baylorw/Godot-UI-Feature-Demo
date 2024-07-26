@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=3 uid="uid://gbr7b5414u82"]
+
+[ext_resource type="Texture2D" uid="uid://oqpcohs1r4xf" path="res://assets/bg.png" id="1_obm7m"]
+[ext_resource type="Script" path="res://levels/panel/panel_example.gd" id="1_rmqpy"]
+[ext_resource type="Texture2D" uid="uid://j1drona8ny23" path="res://assets/homm4/Angel.png" id="2_q6q5u"]
+[ext_resource type="Theme" uid="uid://csvpma8f8hp5q" path="res://themes/our_theme.tres" id="2_t1crq"]
+[ext_resource type="Texture2D" uid="uid://c0m10i26ax8it" path="res://assets/homm4/Angel_icon.webp" id="3_nbu5h"]
+[ext_resource type="Texture2D" uid="uid://br7y3r26tai5k" path="res://assets/homm4/Ash.webp" id="4_huydn"]
+
+[node name="PanelDemo" type="Node"]
+script = ExtResource("1_rmqpy")
+
+[node name="Game Backdrop" type="Sprite2D" parent="."]
+scale = Vector2(0.84407, 0.84375)
+texture = ExtResource("1_obm7m")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="IconsPanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 940.0
+offset_top = 12.0
+offset_right = 1139.0
+offset_bottom = 292.0
+theme = ExtResource("2_t1crq")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/IconsPanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/IconsPanelContainer/MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="angel" type="TextureRect" parent="CanvasLayer/IconsPanelContainer/MarginContainer/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_q6q5u")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/IconsPanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "100"
+metadata/_edit_use_anchors_ = true
+
+[node name="angel_icon" type="TextureRect" parent="CanvasLayer/IconsPanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("3_nbu5h")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="CanvasLayer/IconsPanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "100
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="ash" type="TextureRect" parent="CanvasLayer/IconsPanelContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("4_huydn")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="CanvasLayer/IconsPanelContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "100
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogPanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 253.0
+offset_top = 133.0
+offset_right = 911.0
+offset_bottom = 524.0
+theme = ExtResource("2_t1crq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogPanelContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/DialogPanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Will you accept this mission?"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/DialogPanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "He took his vorpal sword in hand; long time the manxome foe he sought. So rested he by the Tumtum tree.  And stood awhile in thought. And, as in uffish thought he stood, the Jabberwock, with eyes of flame, came whiffling through the tulgey wood, and burbled as it came!"
+autowrap_mode = 2
+justification_flags = 171
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/DialogPanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/DialogPanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Yes, a lot"
+
+[node name="Button2" type="Button" parent="CanvasLayer/DialogPanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "No"

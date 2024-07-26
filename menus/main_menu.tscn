@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcykv4luwdv4t"]
+
+[ext_resource type="Script" path="res://menus/main_menu.gd" id="1_224br"]
+[ext_resource type="Texture2D" uid="uid://degsyt77avgoi" path="res://assets/GUI/frames/stone frame 25.png" id="2_tkpkp"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_224br")
+
+[node name="NinePatchRect 26" type="NinePatchRect" parent="."]
+offset_left = 356.0
+offset_top = 66.0
+offset_right = 907.0
+offset_bottom = 586.0
+texture = ExtResource("2_tkpkp")
+region_rect = Rect2(0, 0, 309, 301)
+patch_margin_left = 96
+patch_margin_top = 120
+patch_margin_right = 66
+patch_margin_bottom = 69
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect 26"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 50
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect 26/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="ButtonButton" type="Button" parent="NinePatchRect 26/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Buttons"
+
+[node name="ContainersButton" type="Button" parent="NinePatchRect 26/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Containers"
+
+[node name="DDLBButton" type="Button" parent="NinePatchRect 26/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Drop Down List Box"
+
+[node name="DragButton" type="Button" parent="NinePatchRect 26/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Drag and Drop
+"
+
+[node name="GridButton" type="Button" parent="NinePatchRect 26/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Grid Container
+"
+
+[node name="NinePatchButton" type="Button" parent="NinePatchRect 26/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nine Patch Rect"
+
+[node name="PanelButton" type="Button" parent="NinePatchRect 26/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Panel"
+
+[node name="SizingButton" type="Button" parent="NinePatchRect 26/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sizing"
+
+[node name="ThemeButton" type="Button" parent="NinePatchRect 26/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Themes"
+
+[connection signal="pressed" from="NinePatchRect 26/MarginContainer/GridContainer/ButtonButton" to="." method="_on_button_button_pressed"]
+[connection signal="pressed" from="NinePatchRect 26/MarginContainer/GridContainer/ContainersButton" to="." method="_on_containers_button_pressed"]
+[connection signal="pressed" from="NinePatchRect 26/MarginContainer/GridContainer/DDLBButton" to="." method="_on_ddlb_button_pressed"]
+[connection signal="pressed" from="NinePatchRect 26/MarginContainer/GridContainer/DragButton" to="." method="_on_drag_button_pressed"]
+[connection signal="pressed" from="NinePatchRect 26/MarginContainer/GridContainer/GridButton" to="." method="_on_grid_button_pressed"]
+[connection signal="pressed" from="NinePatchRect 26/MarginContainer/GridContainer/NinePatchButton" to="." method="_on_nine_patch_button_pressed"]
+[connection signal="pressed" from="NinePatchRect 26/MarginContainer/GridContainer/PanelButton" to="." method="_on_panel_button_pressed"]
+[connection signal="pressed" from="NinePatchRect 26/MarginContainer/GridContainer/SizingButton" to="." method="_on_sizing_button_pressed"]
+[connection signal="pressed" from="NinePatchRect 26/MarginContainer/GridContainer/ThemeButton" to="." method="_on_theme_button_pressed"]

@@ -5,6 +5,11 @@ extends Control
 
 var fruits = ["Apple", "Orange", "Banana", "Lemon"]
 
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://menus/main_menu.tscn")
+
 func _ready():
 	dropdown.clear()
 	#add_items()
@@ -46,11 +51,15 @@ func disable_item(id):
 func _on_dropdown_item_selected(index):
 	var idx2 = dropdown.get_selected_id()
 	dropdown.get_selected_metadata()
-	dropdown.selected
 	print("Selected ID=" + str(idx2))
 	var id = dropdown.get_item_id(index)
 	var props = dropdown.get_item_metadata(idx2)
 	print("Picked " + dropdown.get_item_text(index) + " index=" + str(index) + " id=" + str(id) + " object=" + fruits[index] + " props=" + str(props))
+	$Output.text = "You're getting " + dropdown.get_item_text(dropdown.selected) \
+		+ "\nindex=" + str(index) \
+		+ "\nid=" + str(id) \
+		+ "\nobject=" + fruits[index] \
+		+ "\nprops=" + str(props)
 	
 #func on_item_changed(id):
 	#print("manual event. Picked " + dropdown.get_item_text(id))
